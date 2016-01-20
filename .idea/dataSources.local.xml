@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - pheonix_development@localhost" uuid="cbb507ba-c45b-40e9-8380-d4b481f90f67">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>pheonix_development.pg_catalog pheonix_development.public</schema-pattern>
+      <default-schemas>pheonix_development.public</default-schemas>
+    </data-source>
+  </component>
+</project>

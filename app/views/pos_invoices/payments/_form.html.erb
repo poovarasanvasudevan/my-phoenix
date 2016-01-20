@@ -1,0 +1,91 @@
+<div class="table-responsive table-striped table-hover voucher_payment">
+  <table id="voucher_payments" class="nested_form_rows">
+    <thead>
+      <tr style='height:30px;'>
+        <th class="col-md-6 text-center">Payment Mode</th>
+        <th class="col-md-6 text-center">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% debit_payment_mode = @pos_invoice.debit_entries.payment_account_types_humanize %>
+      <%= f.fields_for :debit_entries do |fde| %>
+        <tr>
+          <td>
+            <%= text_field_tag debit_payment_mode[fde.object.account_id], debit_payment_mode[fde.object.account_id], disabled: true, class: 'form-control' %>
+          </td>
+          <td>
+            <%= fde.hidden_field :account_id, class: 'form-control', readonly: true %>
+            <%= fde.text_field :amount, class: 'form-control payment_amount',
+                  id: fde.object.account_id.present? ? "payment_mode_#{debit_payment_mode[fde.object.account_id].delete(' ').underscore}_amount" : 'payment_mode' %>
+          </td>
+          <td>
+            <%= fde.hidden_field :_destroy, size: '5x5', class: 'payment_destroy' %>
+          </td>
+        </tr>
+        <% if debit_payment_mode[fde.object.account_id] == 'Credit Card' %>
+          <tr>
+            <td colspan='2'>
+              <div id='payment_details' style='margin-bottom:10px;'>
+                <div class='row' style='border-spacing:0 0;'>
+                  <div class='col-md-8' style='padding-right:0px;'>
+                    <%= fde.text_field :bank_name, value: (fde.object.additional_info['bank_name'] if fde.object.additional_info.present? && fde.object.additional_info['bank_name'].present?), id: 'bank_name', class: 'form-control', placeholder: 'Bank Name' %>
+                  </div>
+                  <div class='col-md-4'>
+                    <%= fde.text_field :card_last_digits, value: (fde.object.additional_info['card_last_digits'] if fde.object.additional_info.present? && fde.object.additional_info['card_last_digits'].present?), class: 'form-control', placeholder: 'Last 4 digits', minlength: 4, maxlength: 4 %>
+                  </div>
+                </div>
+                <div class='row' style='border-spacing:0 1px;'>
+                  <div class='col-md-3' style='padding-right:0px;'>
+                    <%= fde.text_field :expiry_month, value: (fde.object.additional_info['expiry_month'] if fde.object.additional_info.present? && fde.object.additional_info['expiry_month'].present?), class: 'form-control', placeholder: 'MM', type: 'number', min: 1, max: 12 %>
+                  </div>
+                  <div class='col-md-3' style='padding-left:0px;padding-right:0px;'>
+                    <%= fde.text_field :expiry_year, value: (fde.object.additional_info['expiry_year'] if fde.object.additional_info.present? && fde.object.additional_info['expiry_year'].present?), class: 'form-control', placeholder: 'YYYY', type: 'number', min: 2015, max: 2040 %>
+                  </div>
+                  <div class='col-md-6'>
+                    <%= fde.text_field :mobile_number, value: (fde.object.additional_info['mobile_number'] if fde.object.additional_info.present? && fde.object.additional_info['mobile_number'].present?), class: 'form-control', placeholder: 'Mobile Number', type: 'number', min: 1000000000, max: 999999999999999 %>
+                  </div>
+                </div>
+                  <%= fde.text_field :card_holder_name, value: (fde.object.additional_info['card_holder_name'] if fde.object.additional_info.present? && fde.object.additional_info['card_holder_name'].present?), class: 'form-control', placeholder: "Card Holder's Name" %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+      <% credit_payment_mode = @pos_invoice.credit_entries.payment_account_types_humanize %>
+      <%= f.fields_for :credit_entries do |fce| %>
+        <% if credit_payment_mode.keys.present? && credit_payment_mode.keys.include?(fce.object.account_id) %>
+          <td>
+            <%= text_field_tag 'Cash Tendered', 'Cash Tendered', disabled: true, class: 'form-control' %>
+          </td>
+          <td>
+            <div class="input-group">
+              <div class="input-group-addon">-</div>
+              <%= fce.hidden_field :account_id, class: 'form-control', readonly: true %>
+              <%= fce.text_field :amount, class: 'form-control change_tendered',
+                    id: "payment_mode_#{credit_payment_mode[fce.object.account_id].delete(' ').underscore}_tendered_amount" %>
+            </div>
+          </td>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <div class='form-group text-center margin-bottom-0'>
+    <h4>
+      <%= label nil, 'Total Payment Received:' %>
+      <%= label_tag '0.00', nil, id: 'payment_total', class: 'form-control text-center', disabled: true %>
+    </h4>
+  </div>
+  <div class='form-group text-center margin-bottom-0'>
+    <h4>
+      <%= label nil, 'Change due:' %>
+      <%= label_tag '0.00', nil, id: 'change_due', class: 'form-control text-center', disabled: true %>
+    </h4>
+  </div>
+  <div class='form-group text-center margin-bottom-0'>
+    <h4>
+      <%= label nil, 'Cash Change Tendered:' %>
+      <%= label_tag '0.00', nil, id: 'change_tendered_label', class: 'form-control text-center', disabled: true %>
+    </h4>
+  </div>
+</div>
+<br>

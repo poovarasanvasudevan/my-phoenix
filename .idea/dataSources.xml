@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="185702181">
+    <data-source source="LOCAL" name="PostgreSQL - pheonix_development@localhost" uuid="cbb507ba-c45b-40e9-8380-d4b481f90f67">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/pheonix_development</jdbc-url>
+    </data-source>
+  </component>
+</project>

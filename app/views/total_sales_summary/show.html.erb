@@ -1,0 +1,48 @@
+<form name="language_report" id="language_report" action="/total-sales-summary-report.xls">
+  <div class="col-md-12">
+    <div class="col-md-4">
+      <label>Language : </label>
+
+      <select class="form-control select-box" name="language_id">
+        <option value="">Select one</option>
+        <% @language.each do |c| %>
+            <option value="<%= c.name %>"><%= c.name %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label>StartDate : </label>
+      <input type="text" name="from_date" id="start_date" class="datetimepicker form-control">
+    </div>
+
+
+    <div class="col-md-4">
+      <label>End Date : </label>
+      <input type="text" name="to_date" id="end_date" class="datetimepicker form-control">
+    </div>
+  </div>
+  <div class='col-md-12 center-block ' style="margin: 20px;">
+    <center>
+      <input type="submit" name="language_submit" value="Search" class="btn btn-primary">
+      <input type="reset" name="language_reset" value="Reset" class="btn btn-warning">
+    </center>
+  </div>
+</form>
+
+<script>
+  $(function () {
+    $('.select-box').select2();
+    $('#language_report').submit(function () {
+
+      var location_id = $('.select-box').val();
+      var startDate = $('#start_date').val();
+      var endDate = $('#end_date').val();
+
+
+
+
+      //return false;
+    });
+  });
+</script>

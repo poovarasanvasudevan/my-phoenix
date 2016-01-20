@@ -1,0 +1,66 @@
+<% provide(:title, 'POS Invoice listing') %>
+<%= link_to 'New Sale invoice', new_pos_invoice_path, class: 'pull-right' %>
+<div class="display responsive no-wrap voucher_line_items">
+  <table id='pos_invoice_index', data-source="<%= pos_invoices_url(format: :json) %>", class='DataTable-line-items'>
+    <thead>
+      <tr>
+        <th class='col-md-1 text-center'>Date</th>
+        <th class='col-md-1 text-center'>Invoice #</th>
+        <th class='col-md-2 text-center'>Entity </th>
+        <th class='col-md-2 text-center'>Location </th>
+        <th class='col-md-1 text-center'>Amount</th>
+        <th class='col-md-2 text-center'>Created by</th>
+        <th class='col-md-2 text-center'>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%# @pos_invoices.find_each do |pos_invoice| %>
+        <!-- <tr>
+          <td class='text-center'><%#= pos_invoice.txn_date.strftime('%d/%m/%Y') %></td>
+          <td class='text-center'><%#= pos_invoice.number %></td>
+          <td class='text-center'>
+            <%#= pos_invoice.location.entity_name_with_location %>
+          </td>
+          <td class='text-center'><%#= pos_invoice.entries.sales_total_amount %></td>
+          <td class='text-center'><%#= pos_invoice.created_by.custom_object_label %></td>
+          <td class='text-center'><%##= link_to 'Show', pos_invoice %>
+            <%#= link_to "PDF version", pos_invoice_url(pos_invoice.id, format: "pdf"), target: :_blank %> | <%#= link_to 'Edit', edit_pos_invoice_path(pos_invoice.id) if current_power.include_record?(:updatable, pos_invoice) %>
+          </td>
+        </tr> -->
+      <%# end %>
+    </tbody>
+  </table>
+</div>
+
+
+<script>
+  $(function () {
+    var dt = $('#pos_invoice_index1').DataTable({
+      "aLengthMenu": [[15, 30, 60, 120, 240], [15, 30, 60, 120, 240]], // -1 for "All"
+      "iDisplayLength": 20,
+      "order": [[0, "desc"], [1, "desc"]],
+      // ajax: ...,
+      // autoWidth: false,
+      pagingType: 'full_numbers',
+      "sPaginationType": "bootstrap",
+      // processing: true,
+      // serverSide: true,
+      responsive: true,
+      "bSort": false
+    });
+
+    $('#date_search').keyup(function () {
+      dt.column(0).search(this.value).draw();
+    });
+    $('#entity_search').keyup(function () {
+      dt.column(2).search(this.value).draw();
+    });
+    $('#location_search').keyup(function () {
+      dt.column(3).search(this.value).draw();
+    });
+    $('#created_by_search').keyup(function () {
+      dt.column(6).search(this.value).draw();
+    });
+
+  });
+</script>

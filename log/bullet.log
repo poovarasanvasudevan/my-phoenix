@@ -1,0 +1,48 @@
+2016-01-20 18:51:38[WARN] user: poovarasan
+/total-sales-summary-validate.json
+Unused Eager Loading detected
+  Product => [:language, :category]
+  Remove from your finder: :includes => [:language, :category]
+
+2016-01-20 18:54:19[WARN] user: poovarasan
+/total-sales-summary-validate.json
+Unused Eager Loading detected
+  Product => [:language, :category]
+  Remove from your finder: :includes => [:language, :category]
+
+2016-01-20 18:57:01[WARN] user: poovarasan
+/total-sales-summary-validate.json
+Unused Eager Loading detected
+  Product => [:language, :category]
+  Remove from your finder: :includes => [:language, :category]
+
+2016-01-20 19:21:17[WARN] user: poovarasan
+/total-sales-summary-validate.json
+Unused Eager Loading detected
+  Product => [:language, :category]
+  Remove from your finder: :includes => [:language, :category]
+
+2016-01-20 19:23:36[WARN] user: poovarasan
+/total-sales-summary-validate.json
+Unused Eager Loading detected
+  Product => [:language, :category]
+  Remove from your finder: :includes => [:language, :category]
+
+2016-01-20 19:30:37[WARN] user: poovarasan
+/total-sales-summary-validate.json
+Unused Eager Loading detected
+  Product => [:language, :category]
+  Remove from your finder: :includes => [:language, :category]
+
+2016-01-20 19:37:04[WARN] user: poovarasan
+/total-sales-summary-validate.json
+Unused Eager Loading detected
+  Product => [:language, :category]
+  Remove from your finder: :includes => [:language, :category]
+
+2016-01-20 19:44:32[WARN] user: poovarasan
+/total-sales-summary-validate.json
+Unused Eager Loading detected
+  Product => [:language, :category]
+  Remove from your finder: :includes => [:language, :category]
+

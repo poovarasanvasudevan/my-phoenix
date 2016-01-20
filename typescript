@@ -1,0 +1,1352 @@
+Script started on Sunday 10 January 2016 12:02:20 PM IST
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-masterr$ psql
+psql: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-masterr$ service [K[K[K[K[K[K[K[Kps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.2  35144  5272 ?        Ss   06:55   0:01 /sbin/init spla
+root         2  0.0  0.0      0     0 ?        S    06:55   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    06:55   0:00 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   06:55   0:00 [kworker/0:0H]
+root         7  0.0  0.0      0     0 ?        S    06:55   0:00 [rcu_sched]
+root         8  0.0  0.0      0     0 ?        S    06:55   0:00 [rcu_bh]
+root         9  0.0  0.0      0     0 ?        S    06:55   0:00 [rcuos/0]
+root        10  0.0  0.0      0     0 ?        S    06:55   0:00 [rcuob/0]
+root        11  0.0  0.0      0     0 ?        S    06:55   0:00 [migration/0]
+root        12  0.0  0.0      0     0 ?        S    06:55   0:00 [watchdog/0]
+root        13  0.0  0.0      0     0 ?        S    06:55   0:00 [watchdog/1]
+root        14  0.0  0.0      0     0 ?        S    06:55   0:00 [migration/1]
+root        15  0.0  0.0      0     0 ?        S    06:55   0:00 [ksoftirqd/1]
+root        17  0.0  0.0      0     0 ?        S<   06:55   0:00 [kworker/1:0H]
+root        18  0.0  0.0      0     0 ?        S    06:55   0:00 [rcuos/1]
+root        19  0.0  0.0      0     0 ?        S    06:55   0:00 [rcuob/1]
+root        20  0.0  0.0      0     0 ?        S<   06:55   0:00 [khelper]
+root        21  0.0  0.0      0     0 ?        S    06:55   0:00 [kdevtmpfs]
+root        22  0.0  0.0      0     0 ?        S<   06:55   0:00 [netns]
+root        23  0.0  0.0      0     0 ?        S<   06:55   0:00 [perf]
+root        24  0.0  0.0      0     0 ?        S    06:55   0:00 [khungtaskd]
+root        25  0.0  0.0      0     0 ?        S<   06:55   0:00 [writeback]
+root        26  0.0  0.0      0     0 ?        SN   06:55   0:00 [ksmd]
+root        27  0.0  0.0      0     0 ?        SN   06:55   0:00 [khugepaged]
+root        28  0.0  0.0      0     0 ?        S<   06:55   0:00 [crypto]
+root        29  0.0  0.0      0     0 ?        S<   06:55   0:00 [kintegrityd]
+root        30  0.0  0.0      0     0 ?        S<   06:55   0:00 [bioset]
+root        31  0.0  0.0      0     0 ?        S<   06:55   0:00 [kblockd]
+root        32  0.0  0.0      0     0 ?        S<   06:55   0:00 [ata_sff]
+root        33  0.0  0.0      0     0 ?        S<   06:55   0:00 [md]
+root        34  0.0  0.0      0     0 ?        S<   06:55   0:00 [devfreq_wq]
+root        37  0.0  0.0      0     0 ?        S    06:55   0:00 [kworker/1:1]
+root        39  0.0  0.0      0     0 ?        S    06:55   0:00 [kswapd0]
+root        40  0.0  0.0      0     0 ?        S    06:55   0:00 [fsnotify_mark]
+root        41  0.0  0.0      0     0 ?        S    06:55   0:00 [ecryptfs-kthre
+root        53  0.0  0.0      0     0 ?        S<   06:55   0:00 [kthrotld]
+root        55  0.0  0.0      0     0 ?        S<   06:55   0:00 [acpi_thermal_p
+root        59  0.0  0.0      0     0 ?        S<   06:55   0:00 [ipv6_addrconf]
+root        78  0.0  0.0      0     0 ?        S<   06:55   0:00 [deferwq]
+root        79  0.0  0.0      0     0 ?        S<   06:55   0:00 [charger_manage
+root       126  0.0  0.0      0     0 ?        S    06:55   0:00 [scsi_eh_0]
+root       127  0.0  0.0      0     0 ?        S<   06:55   0:00 [scsi_tmf_0]
+root       128  0.0  0.0      0     0 ?        S    06:55   0:00 [scsi_eh_1]
+root       129  0.0  0.0      0     0 ?        S<   06:55   0:00 [scsi_tmf_1]
+root       130  0.0  0.0      0     0 ?        S    06:55   0:00 [scsi_eh_2]
+root       131  0.0  0.0      0     0 ?        S<   06:55   0:00 [scsi_tmf_2]
+root       132  0.0  0.0      0     0 ?        S    06:55   0:00 [scsi_eh_3]
+root       133  0.0  0.0      0     0 ?        S<   06:55   0:00 [scsi_tmf_3]
+root       138  0.0  0.0      0     0 ?        S<   06:55   0:00 [kpsmoused]
+root       140  0.0  0.0      0     0 ?        S<   06:55   0:00 [rtsx_pci_sdmmc
+root       151  0.0  0.0      0     0 ?        S    06:55   0:00 [jbd2/sda2-8]
+root       152  0.0  0.0      0     0 ?        S<   06:55   0:00 [ext4-rsv-conve
+root       200  0.0  0.0      0     0 ?        S    06:55   0:00 [kauditd]
+root       223  0.0  0.2  29164  4472 ?        Ss   06:55   0:00 /lib/systemd/sy
+root       229  0.0  0.2  42016  3840 ?        Ss   06:55   0:00 /lib/systemd/sy
+root       270  0.0  0.0      0     0 ?        S<   06:55   0:00 [kworker/0:1H]
+root       278  0.0  0.0      0     0 ?        S<   06:55   0:00 [kmemstick]
+root       311  0.0  0.0      0     0 ?        S<   06:55   0:00 [hd-audio0]
+root       334  0.0  0.0      0     0 ?        S<   06:55   0:00 [cfg80211]
+root       338  0.0  0.0      0     0 ?        S<   06:55   0:00 [kworker/1:1H]
+root       594  0.0  0.4 336412  7872 ?        Ssl  06:55   0:00 /usr/sbin/Modem
+root       597  0.0  0.8 400572 15260 ?        Ssl  06:55   0:00 /usr/sbin/Netwo
+avahi      599  0.0  0.1  30344  2984 ?        Ss   06:55   0:00 avahi-daemon: r
+root       603  0.0  0.4 305308  8464 ?        Ssl  06:55   0:00 /usr/lib/accoun
+whoopsie   604  0.0  0.6 454160 11808 ?        Ssl  06:55   0:00 /usr/bin/whoops
+root       610  0.0  0.1  34624  3084 ?        Ss   06:55   0:00 /usr/sbin/cron 
+root       618  0.0  0.0  10708  1696 ?        Ss   06:55   0:00 /usr/sbin/avahi
+root       637  0.0  0.1  28536  3028 ?        Ss   06:55   0:00 /lib/systemd/sy
+syslog     639  0.0  0.1 255896  3312 ?        Ssl  06:55   0:00 /usr/sbin/rsysl
+root       640  0.0  0.3  93240  6924 ?        Ss   06:55   0:00 /usr/sbin/cupsd
+avahi      644  0.0  0.0  30188   240 ?        S    06:55   0:00 avahi-daemon: c
+root       645  0.0  0.1  19440  2268 ?        Ss   06:55   0:00 /usr/sbin/irqba
+message+   649  0.0  0.2  43672  4632 ?        Ss   06:55   0:00 /usr/bin/dbus-d
+root       709  0.0  0.3 155984  7380 ?        Ssl  06:55   0:00 /usr/sbin/cups-
+root       716  0.0  0.5 304128  9984 ?        Ssl  06:55   0:00 /usr/lib/policy
+root       741  0.0  0.3  30748  6172 ?        Ss   06:55   0:00 /sbin/wpa_suppl
+postgres   744  0.0  1.2 297276 23624 ?        S    06:55   0:00 /usr/lib/postgr
+postgres   753  0.0  0.2 297276  3764 ?        Ss   06:56   0:00 postgres: check
+postgres   754  0.0  0.2 297276  5320 ?        Ss   06:56   0:00 postgres: write
+postgres   755  0.0  0.2 297276  3764 ?        Ss   06:56   0:00 postgres: wal w
+postgres   756  0.0  0.3 297700  6268 ?        Ss   06:56   0:00 postgres: autov
+postgres   757  0.0  0.2 152260  4128 ?        Ss   06:56   0:00 postgres: stats
+root       796  0.0  0.4 291656  7728 ?        SLsl 06:56   0:00 /usr/sbin/light
+root       803  0.1  2.9 288232 54992 tty7     Ssl+ 06:56   0:21 /usr/bin/X -cor
+root       813  0.0  0.0   4396  1824 ?        Ss   06:56   0:00 /usr/sbin/acpid
+nobody     819  0.0  0.1  41784  3544 ?        S    06:56   0:00 /usr/sbin/dnsma
+root       861  0.0  0.1  21548  2156 tty1     Ss+  06:56   0:00 /sbin/agetty --
+kernoops   907  0.0  0.1  35392  2536 ?        Ss   06:56   0:00 /usr/sbin/kerne
+root      1116  0.0  1.1 223468 21472 ?        Ss   06:56   0:00 /usr/sbin/apach
+www-data  1120  0.0  0.3 223492  7224 ?        S    06:56   0:00 /usr/sbin/apach
+www-data  1121  0.0  0.3 223492  7224 ?        S    06:56   0:00 /usr/sbin/apach
+www-data  1122  0.0  0.3 223492  7224 ?        S    06:56   0:00 /usr/sbin/apach
+www-data  1123  0.0  0.3 223492  7224 ?        S    06:56   0:00 /usr/sbin/apach
+www-data  1124  0.0  0.3 223492  7224 ?        S    06:56   0:00 /usr/sbin/apach
+root      1162  0.0  0.3 156428  6216 ?        Sl   06:56   0:00 lightdm --sessi
+poovara+  1181  0.0  0.2  42624  4508 ?        Ss   06:56   0:00 /lib/systemd/sy
+poovara+  1182  0.0  0.0  60624  1660 ?        S    06:56   0:00 (sd-pam)       
+poovara+  1186  0.0  0.4 232700  9304 ?        Sl   06:56   0:00 /usr/bin/gnome-
+poovara+  1188  0.0  1.4 589340 27180 ?        Ssl  06:56   0:00 mate-session
+poovara+  1364  0.0  0.0  10748   328 ?        Ss   06:56   0:00 /usr/bin/ssh-ag
+poovara+  1367  0.0  0.1  24484  1900 ?        S    06:56   0:00 /usr/bin/dbus-l
+poovara+  1368  0.0  0.1  42892  3264 ?        Ss   06:56   0:00 /usr/bin/dbus-d
+poovara+  1441  0.0  0.4 281568  7916 ?        Sl   06:56   0:00 /usr/lib/at-spi
+poovara+  1444  0.0  0.3 272780  5712 ?        Sl   06:56   0:00 /usr/lib/gvfs/g
+poovara+  1450  0.0  0.1  42528  3724 ?        S    06:56   0:00 /usr/bin/dbus-d
+poovara+  1453  0.0  0.2 123196  5000 ?        Sl   06:56   0:00 /usr/lib/at-spi
+poovara+  1458  0.0  0.2 178624  4816 ?        Sl   06:56   0:00 /usr/lib/dconf/
+poovara+  1464  0.0  1.2 816832 22856 ?        Sl   06:56   0:00 /usr/bin/mate-s
+poovara+  1466  0.0  1.3 521980 25916 ?        Sl   06:56   0:01 marco
+poovara+  1470  0.0  3.7 829884 70724 ?        Sl   06:56   0:04 mate-panel
+poovara+  1477  0.0  3.1 1072008 59432 ?       Sl   06:56   0:02 caja
+poovara+  1481  0.0  1.4 518340 27080 ?        Sl   06:56   0:01 /usr/lib/mate-p
+poovara+  1483  0.0  0.4 305172  9044 ?        Sl   06:56   0:00 /usr/lib/gvfs/g
+poovara+  1486  0.0  0.6 431264 11308 ?        S<l  06:56   0:00 /usr/bin/pulsea
+rtkit     1490  0.0  0.1 168956  2560 ?        SNsl 06:56   0:00 /usr/lib/rtkit/
+root      1491  0.0  0.6 385348 11616 ?        Ssl  06:56   0:00 /usr/lib/udisks
+poovara+  1498  0.0  0.8 414400 15528 ?        Sl   06:56   0:00 zeitgeist-datah
+poovara+  1501  0.0  1.0 423212 19696 ?        Sl   06:56   0:00 mate-screensave
+poovara+  1502  0.0  1.4 351340 27868 ?        Sl   06:56   0:00 tilda
+poovara+  1503  0.0  1.0 346656 19824 ?        Sl   06:56   0:00 mate-power-mana
+poovara+  1505  0.0  1.4 225648 27936 ?        Sl   06:56   0:00 /usr/bin/python
+poovara+  1506  0.0  0.4 300980  8392 ?        Sl   06:56   0:00 /usr/lib/x86_64
+poovara+  1510  0.0  1.2 354320 22792 ?        Sl   06:56   0:00 mate-volume-con
+poovara+  1511  0.0  1.3 509292 24460 ?        Sl   06:56   0:00 /usr/lib/x86_64
+poovara+  1513  0.0  1.5 438540 28812 ?        Sl   06:56   0:00 update-notifier
+poovara+  1522  0.0  0.2 191300  5036 ?        Sl   06:56   0:00 /usr/lib/gvfs/g
+poovara+  1528  0.0  0.4 203472  7580 ?        Sl   06:56   0:00 /usr/lib/gvfs/g
+poovara+  1533  0.0  1.9 600228 36504 ?        Sl   06:56   0:00 nm-applet
+poovara+  1551  0.0  0.4 363560  7856 ?        Sl   06:56   0:00 /usr/lib/gvfs/g
+poovara+  1573  0.0  0.4 327864  8472 ?        Sl   06:56   0:00 /usr/lib/gvfs/g
+poovara+  1591  0.0  0.9 325860 17860 ?        Sl   06:56   0:00 /usr/lib/mate-a
+poovara+  1594  0.0  0.3  57896  6192 ?        S    06:56   0:00 /usr/lib/x86_64
+poovara+  1595  0.0  0.0  14852  1824 ?        S    06:56   0:00 gnome-pty-helpe
+poovara+  1596  0.0  0.2  28532  5572 pts/0    Ss+  06:56   0:00 /bin/bash
+poovara+  1608  0.0  0.4 351260  8556 ?        Sl   06:56   0:00 /usr/bin/zeitge
+poovara+  1621  0.0  0.8 246364 15312 ?        Sl   06:56   0:00 /usr/lib/x86_64
+root      1626  0.0  0.5 275636  9716 ?        Ssl  06:56   0:00 /usr/lib/upower
+poovara+  1636  0.0  0.1  22352  2192 ?        S    06:56   0:00 syndaemon -i 0.
+poovara+  1646  0.0  0.8 307096 15808 ?        Sl   06:56   0:00 /usr/lib/mate-p
+poovara+  1647  0.0  1.3 520836 25276 ?        Sl   06:56   0:00 /usr/lib/mate-p
+poovara+  1675  0.0  0.0  13076   736 ?        S    06:56   0:00 /bin/cat
+poovara+  1683  0.0  0.2 117852  5492 ?        Sl   06:56   0:00 /usr/lib/gvfs/g
+poovara+  1770  0.9 18.0 1327232 338332 ?      Sl   06:56   2:50 /usr/lib/firefo
+poovara+  1979  0.0  0.8 514704 16796 ?        Sl   06:58   0:00 /usr/lib/gvfs/g
+poovara+  3083  0.0  1.4 667788 27612 ?        Rl   07:12   0:00 mate-terminal
+poovara+  3088  0.0  0.1  14852  1876 ?        S    07:12   0:00 gnome-pty-helpe
+poovara+  3089  0.0  0.5  32436  9504 pts/1    Ss+  07:12   0:00 -bash
+root      3182  0.0  0.0      0     0 ?        S    07:13   0:00 [kworker/0:0]
+root      3272  0.0  0.0      0     0 ?        S    11:53   0:00 [kworker/u16:26
+root      3295  0.0  0.0      0     0 ?        S    11:53   0:00 [kworker/u16:49
+root      3299  0.0  0.0      0     0 ?        S    11:53   0:00 [irq/27-mei_me]
+root      3300  0.0  0.0      0     0 ?        S    11:53   0:00 [kworker/0:1]
+root      3308  0.0  0.0      0     0 ?        S    11:53   0:00 [kworker/1:0]
+root      3880  0.0  0.5  23468 10208 ?        S    11:54   0:00 /sbin/dhclient 
+ntp       4060  0.0  0.2  33600  4376 ?        Ss   11:55   0:00 /usr/sbin/ntpd 
+root      4116  0.0  0.0      0     0 ?        S    12:00   0:00 [kworker/0:2]
+poovara+  4147  0.2  0.5  32436  9484 pts/2    Ss   12:02   0:00 -bash
+poovara+  4219  0.0  0.1  23404  2292 pts/2    S+   12:02   0:00 script
+poovara+  4220  0.0  0.0  23408  1144 pts/2    R+   12:02   0:00 script
+poovara+  4221  0.0  0.2  28520  5596 pts/3    Ss   12:02   0:00 bash -i
+root      4242  0.0  0.0      0     0 ?        S    12:03   0:00 [kworker/u16:0]
+poovara+  4243  0.0  0.1  24172  2712 pts/3    R+   12:03   0:00 ps aux
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-masterr$ ps aux | grep postgres
+[01;31m[Kpostgres[m[K   744  0.0  1.2 297276 23624 ?        S    06:55   0:00 /usr/lib/[01;31m[Kpostgres[m[Kql/9.5/bin/[01;31m[Kpostgres[m[K -D /var/lib/[01;31m[Kpostgres[m[Kql/9.5/main -c config_file=/etc/[01;31m[Kpostgres[m[Kql/9.5/main/[01;31m[Kpostgres[m[Kql.conf
+[01;31m[Kpostgres[m[K   753  0.0  0.2 297276  3764 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: checkpointer process                                                                                              
+[01;31m[Kpostgres[m[K   754  0.0  0.2 297276  5320 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: writer process                                                                                                    
+[01;31m[Kpostgres[m[K   755  0.0  0.2 297276  3764 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: wal writer process                                                                                                
+[01;31m[Kpostgres[m[K   756  0.0  0.3 297700  6268 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: autovacuum launcher process                                                                                       
+[01;31m[Kpostgres[m[K   757  0.0  0.2 152260  4128 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: stats collector process                                                                                           
+poovara+  4247  0.0  0.1  15188  2252 pts/3    S+   12:03   0:00 grep --color=auto [01;31m[Kpostgres[m[K
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-masterr$ [K[A]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-master$ ps aux | grep postgres
+[01;31m[Kpostgres[m[K   744  0.0  1.2 297276 23624 ?        S    06:55   0:00 /usr/lib/[01;31m[Kpostgres[m[Kql/9.5/bin/[01;31m[Kpostgres[m[K -D /var/lib/[01;31m[Kpostgres[m[Kql/9.5/main -c config_file=/etc/[01;31m[Kpostgres[m[Kql/9.5/main/[01;31m[Kpostgres[m[Kql.conf
+[01;31m[Kpostgres[m[K   753  0.0  0.2 297276  3764 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: checkpointer process                                                                                              
+[01;31m[Kpostgres[m[K   754  0.0  0.2 297276  5320 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: writer process                                                                                                    
+[01;31m[Kpostgres[m[K   755  0.0  0.2 297276  3764 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: wal writer process                                                                                                
+[01;31m[Kpostgres[m[K   756  0.0  0.3 297700  6268 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: autovacuum launcher process                                                                                       
+[01;31m[Kpostgres[m[K   757  0.0  0.2 152260  4128 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: stats collector process                                                                                           
+poovara+  4249  0.0  0.1  15188  2292 pts/3    S+   12:03   0:00 grep --color=auto [01;31m[Kpostgres[m[K
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-master$ postgresql
+postgresql: command not found
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-master$ postgresql[K[K
+No command 'postgres' found, did you mean:
+ Command 'postgrey' from package 'postgrey' (universe)
+postgres: command not found
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-master$ postgres[K[K[K[K[K[K[K[Kpsql'[K
+psql: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-master$ psql -p 5432 -h 12[K[Klocaljho[K[K[Khost
+psql: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-master$ netstat -a
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 poovarasan-HP-24:domain *:*                     LISTEN     
+tcp        0      0 localhost:ipp           *:*                     LISTEN     
+tcp        0      0 localhost:5433          *:*                     LISTEN     
+tcp6       0      0 [::]:http               [::]:*                  LISTEN     
+tcp6       0      0 ip6-localhost:ipp       [::]:*                  LISTEN     
+tcp6       1      0 ip6-localhost:45439     ip6-localhost:ipp       CLOSE_WAIT 
+tcp6       1      0 ip6-localhost:45438     ip6-localhost:ipp       CLOSE_WAIT 
+udp        0      0 *:43814                 *:*                                
+udp        0      0 localhost:54158         localhost:54158         ESTABLISHED
+udp        0      0 *:36821                 *:*                                
+udp        0      0 poovarasan-HP-24:domain *:*                                
+udp        0      0 *:bootpc                *:*                                
+udp        0      0 172.16.2.54:ntp         *:*                                
+udp        0      0 localhost:ntp           *:*                                
+udp        0      0 *:ntp                   *:*                                
+udp        0      0 *:mdns                  *:*                                
+udp        0      0 *:ipp                   *:*                                
+udp6       0      0 fe80::6651:6ff:fe02:ntp [::]:*                             
+udp6       0      0 ip6-localhost:ntp       [::]:*                             
+udp6       0      0 [::]:ntp                [::]:*                             
+udp6       0      0 [::]:mdns               [::]:*                             
+udp6       0      0 [::]:56825              [::]:*                             
+udp6       0      0 [::]:13969              [::]:*                             
+raw6       0      0 [::]:ipv6-icmp          [::]:*                  7          
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     STREAM     LISTENING     19459    /run/user/1000/keyring/ssh
+unix  2      [ ACC ]     STREAM     LISTENING     18320    @/tmp/.ICE-unix/1188
+unix  2      [ ACC ]     STREAM     LISTENING     19461    /run/user/1000/keyring/gpg
+unix  2      [ ]         DGRAM                    31770    /var/run/wpa_supplicant/wlan0
+unix  2      [ ACC ]     STREAM     LISTENING     17000    @/tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     15935    /var/run/NetworkManager/private
+unix  2      [ ACC ]     STREAM     LISTENING     15944    /var/run/NetworkManager/private-dhcp
+unix  2      [ ACC ]     STREAM     LISTENING     19373    @/tmp/dbus-IOAzC6JKWD
+unix  2      [ ACC ]     STREAM     LISTENING     18330    /run/user/1000/keyring/pkcs11
+unix  2      [ ACC ]     STREAM     LISTENING     16804    /var/run/postgresql/.s.PGSQL.5433
+unix  2      [ ACC ]     STREAM     LISTENING     19428    @/tmp/dbus-LOJIXX0lOl
+unix  2      [ ]         DGRAM                    9401     /run/systemd/journal/syslog
+unix  2      [ ]         DGRAM                    18118    /run/user/1000/systemd/notify
+unix  2      [ ACC ]     STREAM     LISTENING     18120    /run/user/1000/systemd/private
+unix  2      [ ]         DGRAM                    1995     /run/systemd/notify
+unix  2      [ ACC ]     STREAM     LISTENING     1997     /run/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     17001    /tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     19360    /tmp/ssh-KBbXPdnGlv4n/agent.1188
+unix  2      [ ACC ]     STREAM     LISTENING     18321    /tmp/.ICE-unix/1188
+unix  2      [ ACC ]     STREAM     LISTENING     14549    /run/uuidd/request
+unix  2      [ ACC ]     STREAM     LISTENING     19160    /run/user/1000/keyring/control
+unix  18     [ ]         DGRAM                    9176     /run/systemd/journal/dev-log
+unix  2      [ ACC ]     STREAM     LISTENING     2009     /run/systemd/fsckd
+unix  2      [ ACC ]     STREAM     LISTENING     14554    /var/run/dbus/system_bus_socket
+unix  2      [ ACC ]     SEQPACKET  LISTENING     9179     /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     14557    /run/acpid.socket
+unix  2      [ ]         DGRAM                    2014     /run/systemd/shutdownd
+unix  2      [ ACC ]     STREAM     LISTENING     14559    /var/run/avahi-daemon/socket
+unix  2      [ ACC ]     STREAM     LISTENING     14562    /var/run/cups/cups.sock
+unix  2      [ ACC ]     STREAM     LISTENING     2026     /run/systemd/journal/stdout
+unix  6      [ ]         DGRAM                    2029     /run/systemd/journal/socket
+unix  2      [ ACC ]     STREAM     LISTENING     19952    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     21293    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     20880    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     16924    
+unix  3      [ ]         STREAM     CONNECTED     21278    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     9542     
+unix  3      [ ]         STREAM     CONNECTED     20364    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     20363    
+unix  3      [ ]         STREAM     CONNECTED     18248    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     14315    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     30986    
+unix  3      [ ]         STREAM     CONNECTED     21071    
+unix  3      [ ]         STREAM     CONNECTED     21038    
+unix  3      [ ]         STREAM     CONNECTED     18340    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     18332    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     30360    
+unix  3      [ ]         STREAM     CONNECTED     20878    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    15334    
+unix  3      [ ]         STREAM     CONNECTED     15793    
+unix  3      [ ]         STREAM     CONNECTED     21237    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18329    
+unix  3      [ ]         STREAM     CONNECTED     25309    
+unix  3      [ ]         STREAM     CONNECTED     30362    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     20182    
+unix  3      [ ]         STREAM     CONNECTED     19569    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18193    
+unix  3      [ ]         STREAM     CONNECTED     16251    
+unix  3      [ ]         STREAM     CONNECTED     20851    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     19456    
+unix  3      [ ]         STREAM     CONNECTED     26183    
+unix  3      [ ]         STREAM     CONNECTED     20887    
+unix  3      [ ]         STREAM     CONNECTED     21339    
+unix  3      [ ]         STREAM     CONNECTED     19415    
+unix  3      [ ]         STREAM     CONNECTED     21282    
+unix  3      [ ]         STREAM     CONNECTED     21101    
+unix  3      [ ]         STREAM     CONNECTED     20889    
+unix  3      [ ]         STREAM     CONNECTED     15937    
+unix  3      [ ]         STREAM     CONNECTED     14267    
+unix  3      [ ]         STREAM     CONNECTED     19455    
+unix  3      [ ]         STREAM     CONNECTED     19489    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22870    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21457    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     18252    
+unix  3      [ ]         STREAM     CONNECTED     21099    
+unix  2      [ ]         DGRAM                    34114    
+unix  3      [ ]         STREAM     CONNECTED     21195    @/tmp/dbus-IOAzC6JKWD
+unix  2      [ ]         DGRAM                    19128    
+unix  3      [ ]         STREAM     CONNECTED     15794    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     35345    
+unix  3      [ ]         STREAM     CONNECTED     21284    
+unix  3      [ ]         STREAM     CONNECTED     20283    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     20855    
+unix  3      [ ]         STREAM     CONNECTED     16381    
+unix  3      [ ]         STREAM     CONNECTED     16494    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22868    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     18258    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21299    
+unix  3      [ ]         STREAM     CONNECTED     21220    @/dbus-vfs-daemon/socket-yzYaTDpx
+unix  3      [ ]         STREAM     CONNECTED     18311    
+unix  3      [ ]         STREAM     CONNECTED     21050    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20980    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     16039    
+unix  3      [ ]         STREAM     CONNECTED     20192    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     15312    
+unix  2      [ ]         DGRAM                    20894    
+unix  3      [ ]         STREAM     CONNECTED     20858    
+unix  3      [ ]         STREAM     CONNECTED     18305    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     15738    
+unix  3      [ ]         STREAM     CONNECTED     9633     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     15798    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     19492    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     21297    
+unix  3      [ ]         STREAM     CONNECTED     18312    
+unix  3      [ ]         STREAM     CONNECTED     21290    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     20863    
+unix  3      [ ]         STREAM     CONNECTED     18314    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18192    
+unix  3      [ ]         STREAM     CONNECTED     21183    
+unix  3      [ ]         STREAM     CONNECTED     14931    
+unix  3      [ ]         STREAM     CONNECTED     21264    
+unix  3      [ ]         STREAM     CONNECTED     17102    
+unix  3      [ ]         STREAM     CONNECTED     20039    
+unix  3      [ ]         STREAM     CONNECTED     19743    
+unix  3      [ ]         STREAM     CONNECTED     21309    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     20600    @/tmp/.ICE-unix/1188
+unix  3      [ ]         STREAM     CONNECTED     21066    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     19931    @/tmp/dbus-IOAzC6JKWD
+unix  2      [ ]         DGRAM                    15788    
+unix  3      [ ]         STREAM     CONNECTED     20034    
+unix  3      [ ]         STREAM     CONNECTED     20866    
+unix  3      [ ]         STREAM     CONNECTED     20188    
+unix  3      [ ]         STREAM     CONNECTED     18424    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22748    
+unix  3      [ ]         STREAM     CONNECTED     20865    
+unix  3      [ ]         STREAM     CONNECTED     17627    
+unix  3      [ ]         STREAM     CONNECTED     21068    
+unix  3      [ ]         STREAM     CONNECTED     21268    
+unix  3      [ ]         STREAM     CONNECTED     20044    
+unix  3      [ ]         STREAM     CONNECTED     19531    
+unix  3      [ ]         STREAM     CONNECTED     29887    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     20282    
+unix  3      [ ]         STREAM     CONNECTED     21276    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17628    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    16286    
+unix  3      [ ]         STREAM     CONNECTED     15952    
+unix  3      [ ]         STREAM     CONNECTED     15792    
+unix  3      [ ]         STREAM     CONNECTED     19518    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22649    
+unix  3      [ ]         STREAM     CONNECTED     20981    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     19930    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21184    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    19056    
+unix  3      [ ]         STREAM     CONNECTED     16295    /run/acpid.socket
+unix  3      [ ]         STREAM     CONNECTED     21175    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21105    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21035    
+unix  3      [ ]         STREAM     CONNECTED     15926    
+unix  3      [ ]         STREAM     CONNECTED     21271    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21041    
+unix  3      [ ]         STREAM     CONNECTED     15795    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     27167    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     20595    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     19521    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     18187    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18113    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19957    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19403    
+unix  3      [ ]         STREAM     CONNECTED     17006    
+unix  3      [ ]         STREAM     CONNECTED     20868    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18429    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     20050    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     23978    
+unix  3      [ ]         STREAM     CONNECTED     20056    
+unix  3      [ ]         STREAM     CONNECTED     18428    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     18345    @/tmp/dbus-LOJIXX0lOl
+unix  2      [ ]         DGRAM                    15674    
+unix  3      [ ]         STREAM     CONNECTED     28399    
+unix  3      [ ]         STREAM     CONNECTED     19431    
+unix  3      [ ]         STREAM     CONNECTED     20596    
+unix  3      [ ]         STREAM     CONNECTED     21245    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20054    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     20037    
+unix  3      [ ]         STREAM     CONNECTED     30370    
+unix  3      [ ]         STREAM     CONNECTED     20355    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     14121    
+unix  3      [ ]         STREAM     CONNECTED     21006    
+unix  3      [ ]         STREAM     CONNECTED     18257    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     15953    
+unix  3      [ ]         STREAM     CONNECTED     20229    
+unix  2      [ ]         DGRAM                    15665    
+unix  3      [ ]         STREAM     CONNECTED     19819    
+unix  3      [ ]         STREAM     CONNECTED     18384    
+unix  3      [ ]         STREAM     CONNECTED     20871    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     20999    
+unix  3      [ ]         STREAM     CONNECTED     19451    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     23979    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21285    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21289    
+unix  3      [ ]         STREAM     CONNECTED     21174    
+unix  3      [ ]         STREAM     CONNECTED     19530    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     19405    
+unix  3      [ ]         STREAM     CONNECTED     19441    
+unix  3      [ ]         STREAM     CONNECTED     20279    
+unix  3      [ ]         DGRAM                    19575    
+unix  3      [ ]         STREAM     CONNECTED     19522    @/tmp/.ICE-unix/1188
+unix  3      [ ]         STREAM     CONNECTED     16775    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     15680    
+unix  3      [ ]         STREAM     CONNECTED     18375    @/tmp/dbus-IOAzC6JKWD
+unix  2      [ ]         DGRAM                    10399    
+unix  3      [ ]         STREAM     CONNECTED     27714    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     18246    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     14833    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20190    
+unix  3      [ ]         STREAM     CONNECTED     19553    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18007    
+unix  3      [ ]         STREAM     CONNECTED     21199    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     19457    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     18296    
+unix  3      [ ]         STREAM     CONNECTED     16340    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21030    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     20598    
+unix  3      [ ]         STREAM     CONNECTED     19783    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     25046    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     20065    
+unix  3      [ ]         STREAM     CONNECTED     20043    
+unix  3      [ ]         STREAM     CONNECTED     15667    
+unix  3      [ ]         STREAM     CONNECTED     20053    
+unix  3      [ ]         STREAM     CONNECTED     19463    
+unix  3      [ ]         STREAM     CONNECTED     21102    
+unix  3      [ ]         STREAM     CONNECTED     16546    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20360    
+unix  3      [ ]         STREAM     CONNECTED     18309    
+unix  3      [ ]         STREAM     CONNECTED     15179    
+unix  3      [ ]         STREAM     CONNECTED     19781    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21009    
+unix  3      [ ]         STREAM     CONNECTED     20295    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     19361    
+unix  3      [ ]         STREAM     CONNECTED     21133    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     20867    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     26451    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     21207    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18310    @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    16512    
+unix  3      [ ]         STREAM     CONNECTED     21296    
+unix  3      [ ]         STREAM     CONNECTED     21193    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21113    
+unix  3      [ ]         STREAM     CONNECTED     19493    
+unix  3      [ ]         STREAM     CONNECTED     19437    
+unix  3      [ ]         STREAM     CONNECTED     14672    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21171    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    20641    
+unix  3      [ ]         STREAM     CONNECTED     16496    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21104    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     19554    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     16511    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21112    
+unix  3      [ ]         STREAM     CONNECTED     21209    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     15268    
+unix  3      [ ]         STREAM     CONNECTED     16462    
+unix  3      [ ]         STREAM     CONNECTED     19576    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     30976    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     21343    
+unix  3      [ ]         STREAM     CONNECTED     18338    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21189    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21072    @/dbus-vfs-daemon/socket-Wh8VFnb1
+unix  3      [ ]         STREAM     CONNECTED     19517    
+unix  3      [ ]         STREAM     CONNECTED     16539    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21277    
+unix  3      [ ]         STREAM     CONNECTED     20082    @/tmp/.ICE-unix/1188
+unix  3      [ ]         STREAM     CONNECTED     17076    
+unix  3      [ ]         STREAM     CONNECTED     15745    
+unix  3      [ ]         STREAM     CONNECTED     19465    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     30977    @/tmp/.ICE-unix/1188
+unix  3      [ ]         STREAM     CONNECTED     20877    
+unix  3      [ ]         STREAM     CONNECTED     19411    
+unix  3      [ ]         STREAM     CONNECTED     30975    
+unix  3      [ ]         STREAM     CONNECTED     21106    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20857    
+unix  3      [ ]         STREAM     CONNECTED     22641    
+unix  3      [ ]         STREAM     CONNECTED     20879    
+unix  3      [ ]         STREAM     CONNECTED     15516    
+unix  3      [ ]         STREAM     CONNECTED     26837    
+unix  3      [ ]         STREAM     CONNECTED     20319    
+unix  3      [ ]         STREAM     CONNECTED     18423    
+unix  3      [ ]         STREAM     CONNECTED     16519    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    9544     
+unix  3      [ ]         STREAM     CONNECTED     30357    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21338    
+unix  3      [ ]         STREAM     CONNECTED     21283    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19524    
+unix  3      [ ]         STREAM     CONNECTED     15305    
+unix  3      [ ]         STREAM     CONNECTED     20036    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     16537    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21360    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19997    
+unix  3      [ ]         STREAM     CONNECTED     18420    
+unix  2      [ ]         DGRAM                    17412    
+unix  3      [ ]         STREAM     CONNECTED     30361    
+unix  3      [ ]         STREAM     CONNECTED     21292    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     20850    
+unix  3      [ ]         STREAM     CONNECTED     21100    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     20888    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     19529    
+unix  3      [ ]         STREAM     CONNECTED     26429    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     20361    
+unix  3      [ ]         STREAM     CONNECTED     20341    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     15725    
+unix  3      [ ]         STREAM     CONNECTED     20293    
+unix  3      [ ]         STREAM     CONNECTED     18335    
+unix  3      [ ]         STREAM     CONNECTED     14314    
+unix  3      [ ]         STREAM     CONNECTED     20856    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     30369    
+unix  3      [ ]         STREAM     CONNECTED     22869    
+unix  3      [ ]         STREAM     CONNECTED     18259    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21185    
+unix  3      [ ]         STREAM     CONNECTED     19958    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19937    
+unix  3      [ ]         STREAM     CONNECTED     20859    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     14175    
+unix  3      [ ]         STREAM     CONNECTED     18316    
+unix  3      [ ]         STREAM     CONNECTED     15796    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     15727    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     26198    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22867    
+unix  3      [ ]         STREAM     CONNECTED     19416    
+unix  3      [ ]         STREAM     CONNECTED     21040    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     18419    
+unix  3      [ ]         STREAM     CONNECTED     20298    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     20184    
+unix  3      [ ]         STREAM     CONNECTED     19562    
+unix  3      [ ]         STREAM     CONNECTED     20296    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     19442    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     32792    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     21049    
+unix  3      [ ]         STREAM     CONNECTED     19878    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20864    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     19467    
+unix  3      [ ]         STREAM     CONNECTED     23983    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21265    @/dbus-vfs-daemon/socket-IZkvQeTF
+unix  3      [ ]         STREAM     CONNECTED     20467    
+unix  3      [ ]         STREAM     CONNECTED     20038    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     16360    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     15797    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21216    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18337    
+unix  3      [ ]         STREAM     CONNECTED     30973    
+unix  3      [ ]         STREAM     CONNECTED     21042    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21298    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18344    
+unix  3      [ ]         STREAM     CONNECTED     21065    
+unix  3      [ ]         STREAM     CONNECTED     20897    
+unix  3      [ ]         STREAM     CONNECTED     21269    @/dbus-vfs-daemon/socket-OeNHpsAf
+unix  3      [ ]         STREAM     CONNECTED     16925    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21036    
+unix  3      [ ]         DGRAM                    10481    
+unix  3      [ ]         STREAM     CONNECTED     19785    @/tmp/dbus-IOAzC6JKWD
+unix  2      [ ]         DGRAM                    16041    
+unix  3      [ ]         STREAM     CONNECTED     20051    
+unix  3      [ ]         STREAM     CONNECTED     21097    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     19634    
+unix  3      [ ]         STREAM     CONNECTED     19940    
+unix  3      [ ]         STREAM     CONNECTED     19407    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     32106    
+unix  3      [ ]         STREAM     CONNECTED     21069    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     20896    
+unix  3      [ ]         STREAM     CONNECTED     19438    
+unix  3      [ ]         STREAM     CONNECTED     21275    
+unix  3      [ ]         STREAM     CONNECTED     20045    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     19744    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     20035    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     18342    
+unix  3      [ ]         DGRAM                    10480    
+unix  3      [ ]         STREAM     CONNECTED     22648    
+unix  3      [ ]         STREAM     CONNECTED     19786    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     18313    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     15950    
+unix  3      [ ]         STREAM     CONNECTED     20194    
+unix  3      [ ]         STREAM     CONNECTED     19578    
+unix  3      [ ]         STREAM     CONNECTED     16464    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18347    
+unix  3      [ ]         STREAM     CONNECTED     18304    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     14619    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    18105    
+unix  3      [ ]         STREAM     CONNECTED     21359    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20028    
+unix  3      [ ]         STREAM     CONNECTED     20594    
+unix  3      [ ]         STREAM     CONNECTED     16046    
+unix  3      [ ]         STREAM     CONNECTED     19560    
+unix  3      [ ]         STREAM     CONNECTED     15668    
+unix  3      [ ]         STREAM     CONNECTED     19579    
+unix  3      [ ]         STREAM     CONNECTED     18346    
+unix  3      [ ]         STREAM     CONNECTED     30367    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     23971    
+unix  3      [ ]         STREAM     CONNECTED     19374    
+unix  3      [ ]         STREAM     CONNECTED     21188    
+unix  3      [ ]         STREAM     CONNECTED     21114    
+unix  3      [ ]         STREAM     CONNECTED     17107    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16771    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19417    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     16488    /var/run/avahi-daemon/socket
+unix  3      [ ]         STREAM     CONNECTED     20055    
+unix  3      [ ]         STREAM     CONNECTED     20041    
+unix  3      [ ]         STREAM     CONNECTED     14268    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21194    
+unix  3      [ ]         STREAM     CONNECTED     19563    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20040    @/tmp/.X11-unix/X0
+unix  3      [ ]         DGRAM                    19574    
+unix  3      [ ]         STREAM     CONNECTED     18385    @/tmp/.ICE-unix/1188
+unix  3      [ ]         STREAM     CONNECTED     29159    
+unix  3      [ ]         STREAM     CONNECTED     18261    
+unix  3      [ ]         STREAM     CONNECTED     15285    
+unix  3      [ ]         STREAM     CONNECTED     22651    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21262    
+unix  3      [ ]         STREAM     CONNECTED     21177    
+unix  3      [ ]         STREAM     CONNECTED     26197    
+unix  3      [ ]         STREAM     CONNECTED     20870    
+unix  3      [ ]         STREAM     CONNECTED     20230    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21186    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20525    
+unix  3      [ ]         STREAM     CONNECTED     20882    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     19631    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21178    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21000    @/tmp/dbus-IOAzC6JKWD
+unix  2      [ ]         DGRAM                    34527    
+unix  3      [ ]         STREAM     CONNECTED     22642    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18100    
+unix  3      [ ]         STREAM     CONNECTED     20354    
+unix  3      [ ]         STREAM     CONNECTED     18008    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20294    
+unix  3      [ ]         STREAM     CONNECTED     21010    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     19782    
+unix  3      [ ]         STREAM     CONNECTED     20599    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     15912    
+unix  3      [ ]         STREAM     CONNECTED     34741    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     21144    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     15918    
+unix  2      [ ]         DGRAM                    16489    
+unix  3      [ ]         STREAM     CONNECTED     18414    
+unix  3      [ ]         STREAM     CONNECTED     21198    
+unix  3      [ ]         STREAM     CONNECTED     18328    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21103    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21007    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     16255    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     14675    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21206    
+unix  3      [ ]         STREAM     CONNECTED     19433    @/tmp/dbus-LOJIXX0lOl
+unix  3      [ ]         STREAM     CONNECTED     19780    
+unix  3      [ ]         STREAM     CONNECTED     15637    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19525    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     19432    
+unix  3      [ ]         STREAM     CONNECTED     19561    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20083    
+unix  3      [ ]         STREAM     CONNECTED     19794    
+unix  3      [ ]         STREAM     CONNECTED     19778    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     21208    
+unix  3      [ ]         STREAM     CONNECTED     19408    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25317    
+unix  3      [ ]         STREAM     CONNECTED     15616    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20049    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21212    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     19795    
+unix  2      [ ]         DGRAM                    19627    
+unix  3      [ ]         STREAM     CONNECTED     20042    
+unix  3      [ ]         STREAM     CONNECTED     20529    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20048    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21029    
+unix  3      [ ]         STREAM     CONNECTED     18253    
+unix  3      [ ]         STREAM     CONNECTED     19450    @/tmp/dbus-IOAzC6JKWD
+unix  3      [ ]         STREAM     CONNECTED     18194    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     15641    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21192    
+unix  3      [ ]         STREAM     CONNECTED     14671    
+unix  3      [ ]         STREAM     CONNECTED     20069    
+unix  3      [ ]         STREAM     CONNECTED     18415    
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-master$ netstat -a | grep 5432
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-master$ ps aux |grep postgres
+[01;31m[Kpostgres[m[K   744  0.0  1.2 297276 23624 ?        S    06:55   0:00 /usr/lib/[01;31m[Kpostgres[m[Kql/9.5/bin/[01;31m[Kpostgres[m[K -D /var/lib/[01;31m[Kpostgres[m[Kql/9.5/main -c config_file=/etc/[01;31m[Kpostgres[m[Kql/9.5/main/[01;31m[Kpostgres[m[Kql.conf
+[01;31m[Kpostgres[m[K   753  0.0  0.2 297276  3764 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: checkpointer process                                                                                              
+[01;31m[Kpostgres[m[K   754  0.0  0.2 297276  5320 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: writer process                                                                                                    
+[01;31m[Kpostgres[m[K   755  0.0  0.2 297276  3764 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: wal writer process                                                                                                
+[01;31m[Kpostgres[m[K   756  0.0  0.3 297700  6268 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: autovacuum launcher process                                                                                       
+[01;31m[Kpostgres[m[K   757  0.0  0.2 152260  4128 ?        Ss   06:56   0:00 [01;31m[Kpostgres[m[K: stats collector process                                                                                           
+poovara+  4280  0.0  0.1  15188  2244 pts/3    S+   12:05   0:00 grep --color=auto [01;31m[Kpostgres[m[K
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-master$ cat /etc/postgresql/9.5/main/postgresql.conf 
+# -----------------------------
+# PostgreSQL configuration file
+# -----------------------------
+#
+# This file consists of lines of the form:
+#
+#   name = value
+#
+# (The "=" is optional.)  Whitespace may be used.  Comments are introduced with
+# "#" anywhere on a line.  The complete list of parameter names and allowed
+# values can be found in the PostgreSQL documentation.
+#
+# The commented-out settings shown in this file represent the default values.
+# Re-commenting a setting is NOT sufficient to revert it to the default value;
+# you need to reload the server.
+#
+# This file is read on server startup and when the server receives a SIGHUP
+# signal.  If you edit the file on a running system, you have to SIGHUP the
+# server for the changes to take effect, or use "pg_ctl reload".  Some
+# parameters, which are marked below, require a server shutdown and restart to
+# take effect.
+#
+# Any parameter can also be given as a command-line option to the server, e.g.,
+# "postgres -c log_connections=on".  Some parameters can be changed at run time
+# with the "SET" SQL command.
+#
+# Memory units:  kB = kilobytes        Time units:  ms  = milliseconds
+#                MB = megabytes                     s   = seconds
+#                GB = gigabytes                     min = minutes
+#                TB = terabytes                     h   = hours
+#                                                   d   = days
+
+
+#------------------------------------------------------------------------------
+# FILE LOCATIONS
+#------------------------------------------------------------------------------
+
+# The default values of these variables are driven from the -D command-line
+# option or PGDATA environment variable, represented here as ConfigDir.
+
+data_directory = '/var/lib/postgresql/9.5/main'		# use data in another directory
+					# (change requires restart)
+hba_file = '/etc/postgresql/9.5/main/pg_hba.conf'	# host-based authentication file
+					# (change requires restart)
+ident_file = '/etc/postgresql/9.5/main/pg_ident.conf'	# ident configuration file
+					# (change requires restart)
+
+# If external_pid_file is not explicitly set, no extra PID file is written.
+external_pid_file = '/var/run/postgresql/9.5-main.pid'			# write an extra PID file
+					# (change requires restart)
+
+
+#------------------------------------------------------------------------------
+# CONNECTIONS AND AUTHENTICATION
+#------------------------------------------------------------------------------
+
+# - Connection Settings -
+
+#listen_addresses = 'localhost'		# what IP address(es) to listen on;
+					# comma-separated list of addresses;
+					# defaults to 'localhost'; use '*' for all
+					# (change requires restart)
+port = 5433				# (change requires restart)
+max_connections = 100			# (change requires restart)
+# Note:  Increasing max_connections costs ~400 bytes of shared memory per
+# connection slot, plus lock space (see max_locks_per_transaction).
+#superuser_reserved_connections = 3	# (change requires restart)
+unix_socket_directories = '/var/run/postgresql'	# comma-separated list of directories
+					# (change requires restart)
+#unix_socket_group = ''			# (change requires restart)
+#unix_socket_permissions = 0777		# begin with 0 to use octal notation
+					# (change requires restart)
+#bonjour = off				# advertise server via Bonjour
+					# (change requires restart)
+#bonjour_name = ''			# defaults to the computer name
+					# (change requires restart)
+
+# - Security and Authentication -
+
+#authentication_timeout = 1min		# 1s-600s
+ssl = true				# (change requires restart)
+#ssl_ciphers = 'HIGH:MEDIUM:+3DES:!aNULL' # allowed SSL ciphers
+					# (change requires restart)
+#ssl_prefer_server_ciphers = on		# (change requires restart)
+#ssl_ecdh_curve = 'prime256v1'		# (change requires restart)
+ssl_cert_file = '/etc/ssl/certs/ssl-cert-snakeoil.pem'		# (change requires restart)
+ssl_key_file = '/etc/ssl/private/ssl-cert-snakeoil.key'		# (change requires restart)
+#ssl_ca_file = ''			# (change requires restart)
+#ssl_crl_file = ''			# (change requires restart)
+#password_encryption = on
+#db_user_namespace = off
+#row_security = on
+
+# GSSAPI using Kerberos
+#krb_server_keyfile = ''
+#krb_caseins_users = off
+
+# - TCP Keepalives -
+# see "man 7 tcp" for details
+
+#tcp_keepalives_idle = 0		# TCP_KEEPIDLE, in seconds;
+					# 0 selects the system default
+#tcp_keepalives_interval = 0		# TCP_KEEPINTVL, in seconds;
+					# 0 selects the system default
+#tcp_keepalives_count = 0		# TCP_KEEPCNT;
+					# 0 selects the system default
+
+
+#------------------------------------------------------------------------------
+# RESOURCE USAGE (except WAL)
+#------------------------------------------------------------------------------
+
+# - Memory -
+
+shared_buffers = 128MB			# min 128kB
+					# (change requires restart)
+#huge_pages = try			# on, off, or try
+					# (change requires restart)
+#temp_buffers = 8MB			# min 800kB
+#max_prepared_transactions = 0		# zero disables the feature
+					# (change requires restart)
+# Note:  Increasing max_prepared_transactions costs ~600 bytes of shared memory
+# per transaction slot, plus lock space (see max_locks_per_transaction).
+# It is not advisable to set max_prepared_transactions nonzero unless you
+# actively intend to use prepared transactions.
+#work_mem = 4MB				# min 64kB
+#maintenance_work_mem = 64MB		# min 1MB
+#autovacuum_work_mem = -1		# min 1MB, or -1 to use maintenance_work_mem
+#max_stack_depth = 2MB			# min 100kB
+dynamic_shared_memory_type = posix	# the default is the first option
+					# supported by the operating system:
+					#   posix
+					#   sysv
+					#   windows
+					#   mmap
+					# use none to disable dynamic shared memory
+
+# - Disk -
+
+#temp_file_limit = -1			# limits per-session temp file space
+					# in kB, or -1 for no limit
+
+# - Kernel Resource Usage -
+
+#max_files_per_process = 1000		# min 25
+					# (change requires restart)
+#shared_preload_libraries = ''		# (change requires restart)
+
+# - Cost-Based Vacuum Delay -
+
+#vacuum_cost_delay = 0			# 0-100 milliseconds
+#vacuum_cost_page_hit = 1		# 0-10000 credits
+#vacuum_cost_page_miss = 10		# 0-10000 credits
+#vacuum_cost_page_dirty = 20		# 0-10000 credits
+#vacuum_cost_limit = 200		# 1-10000 credits
+
+# - Background Writer -
+
+#bgwriter_delay = 200ms			# 10-10000ms between rounds
+#bgwriter_lru_maxpages = 100		# 0-1000 max buffers written/round
+#bgwriter_lru_multiplier = 2.0		# 0-10.0 multipler on buffers scanned/round
+
+# - Asynchronous Behavior -
+
+#effective_io_concurrency = 1		# 1-1000; 0 disables prefetching
+#max_worker_processes = 8
+
+
+#------------------------------------------------------------------------------
+# WRITE AHEAD LOG
+#------------------------------------------------------------------------------
+
+# - Settings -
+
+#wal_level = minimal			# minimal, archive, hot_standby, or logical
+					# (change requires restart)
+#fsync = on				# turns forced synchronization on or off
+#synchronous_commit = on		# synchronization level;
+					# off, local, remote_write, or on
+#wal_sync_method = fsync		# the default is the first option
+					# supported by the operating system:
+					#   open_datasync
+					#   fdatasync (default on Linux)
+					#   fsync
+					#   fsync_writethrough
+					#   open_sync
+#full_page_writes = on			# recover from partial page writes
+#wal_compression = off			# enable compression of full-page writes
+#wal_log_hints = off			# also do full page writes of non-critical updates
+					# (change requires restart)
+#wal_buffers = -1			# min 32kB, -1 sets based on shared_buffers
+					# (change requires restart)
+#wal_writer_delay = 200ms		# 1-10000 milliseconds
+
+#commit_delay = 0			# range 0-100000, in microseconds
+#commit_siblings = 5			# range 1-1000
+
+# - Checkpoints -
+
+#checkpoint_timeout = 5min		# range 30s-1h
+#max_wal_size = 1GB
+#min_wal_size = 80MB
+#checkpoint_completion_target = 0.5	# checkpoint target duration, 0.0 - 1.0
+#checkpoint_warning = 30s		# 0 disables
+
+# - Archiving -
+
+#archive_mode = off		# enables archiving; off, on, or always
+				# (change requires restart)
+#archive_command = ''		# command to use to archive a logfile segment
+				# placeholders: %p = path of file to archive
+				#               %f = file name only
+				# e.g. 'test ! -f /mnt/server/archivedir/%f && cp %p /mnt/server/archivedir/%f'
+#archive_timeout = 0		# force a logfile segment switch after this
+				# number of seconds; 0 disables
+
+
+#------------------------------------------------------------------------------
+# REPLICATION
+#------------------------------------------------------------------------------
+
+# - Sending Server(s) -
+
+# Set these on the master and on any standby that will send replication data.
+
+#max_wal_senders = 0		# max number of walsender processes
+				# (change requires restart)
+#wal_keep_segments = 0		# in logfile segments, 16MB each; 0 disables
+#wal_sender_timeout = 60s	# in milliseconds; 0 disables
+
+#max_replication_slots = 0	# max number of replication slots
+				# (change requires restart)
+#track_commit_timestamp = off	# collect timestamp of transaction commit
+				# (change requires restart)
+
+# - Master Server -
+
+# These settings are ignored on a standby server.
+
+#synchronous_standby_names = ''	# standby servers that provide sync rep
+				# comma-separated list of application_name
+				# from standby(s); '*' = all
+#vacuum_defer_cleanup_age = 0	# number of xacts by which cleanup is delayed
+
+# - Standby Servers -
+
+# These settings are ignored on a master server.
+
+#hot_standby = off			# "on" allows queries during recovery
+					# (change requires restart)
+#max_standby_archive_delay = 30s	# max delay before canceling queries
+					# when reading WAL from archive;
+					# -1 allows indefinite delay
+#max_standby_streaming_delay = 30s	# max delay before canceling queries
+					# when reading streaming WAL;
+					# -1 allows indefinite delay
+#wal_receiver_status_interval = 10s	# send replies at least this often
+					# 0 disables
+#hot_standby_feedback = off		# send info from standby to prevent
+					# query conflicts
+#wal_receiver_timeout = 60s		# time that receiver waits for
+					# communication from master
+					# in milliseconds; 0 disables
+#wal_retrieve_retry_interval = 5s	# time to wait before retrying to
+					# retrieve WAL after a failed attempt
+
+
+#------------------------------------------------------------------------------
+# QUERY TUNING
+#------------------------------------------------------------------------------
+
+# - Planner Method Configuration -
+
+#enable_bitmapscan = on
+#enable_hashagg = on
+#enable_hashjoin = on
+#enable_indexscan = on
+#enable_indexonlyscan = on
+#enable_material = on
+#enable_mergejoin = on
+#enable_nestloop = on
+#enable_seqscan = on
+#enable_sort = on
+#enable_tidscan = on
+
+# - Planner Cost Constants -
+
+#seq_page_cost = 1.0			# measured on an arbitrary scale
+#random_page_cost = 4.0			# same scale as above
+#cpu_tuple_cost = 0.01			# same scale as above
+#cpu_index_tuple_cost = 0.005		# same scale as above
+#cpu_operator_cost = 0.0025		# same scale as above
+#effective_cache_size = 4GB
+
+# - Genetic Query Optimizer -
+
+#geqo = on
+#geqo_threshold = 12
+#geqo_effort = 5			# range 1-10
+#geqo_pool_size = 0			# selects default based on effort
+#geqo_generations = 0			# selects default based on effort
+#geqo_selection_bias = 2.0		# range 1.5-2.0
+#geqo_seed = 0.0			# range 0.0-1.0
+
+# - Other Planner Options -
+
+#default_statistics_target = 100	# range 1-10000
+#constraint_exclusion = partition	# on, off, or partition
+#cursor_tuple_fraction = 0.1		# range 0.0-1.0
+#from_collapse_limit = 8
+#join_collapse_limit = 8		# 1 disables collapsing of explicit
+					# JOIN clauses
+
+
+#------------------------------------------------------------------------------
+# ERROR REPORTING AND LOGGING
+#------------------------------------------------------------------------------
+
+# - Where to Log -
+
+#log_destination = 'stderr'		# Valid values are combinations of
+					# stderr, csvlog, syslog, and eventlog,
+					# depending on platform.  csvlog
+					# requires logging_collector to be on.
+
+# This is used when logging to stderr:
+#logging_collector = off		# Enable capturing of stderr and csvlog
+					# into log files. Required to be on for
+					# csvlogs.
+					# (change requires restart)
+
+# These are only used if logging_collector is on:
+#log_directory = 'pg_log'		# directory where log files are written,
+					# can be absolute or relative to PGDATA
+#log_filename = 'postgresql-%Y-%m-%d_%H%M%S.log'	# log file name pattern,
+					# can include strftime() escapes
+#log_file_mode = 0600			# creation mode for log files,
+					# begin with 0 to use octal notation
+#log_truncate_on_rotation = off		# If on, an existing log file with the
+					# same name as the new log file will be
+					# truncated rather than appended to.
+					# But such truncation only occurs on
+					# time-driven rotation, not on restarts
+					# or size-driven rotation.  Default is
+					# off, meaning append to existing files
+					# in all cases.
+#log_rotation_age = 1d			# Automatic rotation of logfiles will
+					# happen after that time.  0 disables.
+#log_rotation_size = 10MB		# Automatic rotation of logfiles will
+					# happen after that much log output.
+					# 0 disables.
+
+# These are relevant when logging to syslog:
+#syslog_facility = 'LOCAL0'
+#syslog_ident = 'postgres'
+
+# This is only relevant when logging to eventlog (win32):
+#event_source = 'PostgreSQL'
+
+# - When to Log -
+
+#client_min_messages = notice		# values in order of decreasing detail:
+					#   debug5
+					#   debug4
+					#   debug3
+					#   debug2
+					#   debug1
+					#   log
+					#   notice
+					#   warning
+					#   error
+
+#log_min_messages = warning		# values in order of decreasing detail:
+					#   debug5
+					#   debug4
+					#   debug3
+					#   debug2
+					#   debug1
+					#   info
+					#   notice
+					#   warning
+					#   error
+					#   log
+					#   fatal
+					#   panic
+
+#log_min_error_statement = error	# values in order of decreasing detail:
+					#   debug5
+					#   debug4
+					#   debug3
+					#   debug2
+					#   debug1
+					#   info
+					#   notice
+					#   warning
+					#   error
+					#   log
+					#   fatal
+					#   panic (effectively off)
+
+#log_min_duration_statement = -1	# -1 is disabled, 0 logs all statements
+					# and their durations, > 0 logs only
+					# statements running at least this number
+					# of milliseconds
+
+
+# - What to Log -
+
+#debug_print_parse = off
+#debug_print_rewritten = off
+#debug_print_plan = off
+#debug_pretty_print = on
+#log_checkpoints = off
+#log_connections = off
+#log_disconnections = off
+#log_duration = off
+#log_error_verbosity = default		# terse, default, or verbose messages
+#log_hostname = off
+log_line_prefix = '%t [%p-%l] %q%u@%d '			# special values:
+					#   %a = application name
+					#   %u = user name
+					#   %d = database name
+					#   %r = remote host and port
+					#   %h = remote host
+					#   %p = process ID
+					#   %t = timestamp without milliseconds
+					#   %m = timestamp with milliseconds
+					#   %i = command tag
+					#   %e = SQL state
+					#   %c = session ID
+					#   %l = session line number
+					#   %s = session start timestamp
+					#   %v = virtual transaction ID
+					#   %x = transaction ID (0 if none)
+					#   %q = stop here in non-session
+					#        processes
+					#   %% = '%'
+					# e.g. '<%u%%%d> '
+#log_lock_waits = off			# log lock waits >= deadlock_timeout
+#log_statement = 'none'			# none, ddl, mod, all
+#log_replication_commands = off
+#log_temp_files = -1			# log temporary files equal or larger
+					# than the specified size in kilobytes;
+					# -1 disables, 0 logs all temp files
+log_timezone = 'localtime'
+
+
+# - Process Title -
+
+#cluster_name = ''			# added to process titles if nonempty
+					# (change requires restart)
+#update_process_title = on
+
+
+#------------------------------------------------------------------------------
+# RUNTIME STATISTICS
+#------------------------------------------------------------------------------
+
+# - Query/Index Statistics Collector -
+
+#track_activities = on
+#track_counts = on
+#track_io_timing = off
+#track_functions = none			# none, pl, all
+#track_activity_query_size = 1024	# (change requires restart)
+stats_temp_directory = '/var/run/postgresql/9.5-main.pg_stat_tmp'
+
+
+# - Statistics Monitoring -
+
+#log_parser_stats = off
+#log_planner_stats = off
+#log_executor_stats = off
+#log_statement_stats = off
+
+
+#------------------------------------------------------------------------------
+# AUTOVACUUM PARAMETERS
+#------------------------------------------------------------------------------
+
+#autovacuum = on			# Enable autovacuum subprocess?  'on'
+					# requires track_counts to also be on.
+#log_autovacuum_min_duration = -1	# -1 disables, 0 logs all actions and
+					# their durations, > 0 logs only
+					# actions running at least this number
+					# of milliseconds.
+#autovacuum_max_workers = 3		# max number of autovacuum subprocesses
+					# (change requires restart)
+#autovacuum_naptime = 1min		# time between autovacuum runs
+#autovacuum_vacuum_threshold = 50	# min number of row updates before
+					# vacuum
+#autovacuum_analyze_threshold = 50	# min number of row updates before
+					# analyze
+#autovacuum_vacuum_scale_factor = 0.2	# fraction of table size before vacuum
+#autovacuum_analyze_scale_factor = 0.1	# fraction of table size before analyze
+#autovacuum_freeze_max_age = 200000000	# maximum XID age before forced vacuum
+					# (change requires restart)
+#autovacuum_multixact_freeze_max_age = 400000000	# maximum multixact age
+					# before forced vacuum
+					# (change requires restart)
+#autovacuum_vacuum_cost_delay = 20ms	# default vacuum cost delay for
+					# autovacuum, in milliseconds;
+					# -1 means use vacuum_cost_delay
+#autovacuum_vacuum_cost_limit = -1	# default vacuum cost limit for
+					# autovacuum, -1 means use
+					# vacuum_cost_limit
+
+
+#------------------------------------------------------------------------------
+# CLIENT CONNECTION DEFAULTS
+#------------------------------------------------------------------------------
+
+# - Statement Behavior -
+
+#search_path = '"$user", public'	# schema names
+#default_tablespace = ''		# a tablespace name, '' uses the default
+#temp_tablespaces = ''			# a list of tablespace names, '' uses
+					# only default tablespace
+#check_function_bodies = on
+#default_transaction_isolation = 'read committed'
+#default_transaction_read_only = off
+#default_transaction_deferrable = off
+#session_replication_role = 'origin'
+#statement_timeout = 0			# in milliseconds, 0 is disabled
+#lock_timeout = 0			# in milliseconds, 0 is disabled
+#vacuum_freeze_min_age = 50000000
+#vacuum_freeze_table_age = 150000000
+#vacuum_multixact_freeze_min_age = 5000000
+#vacuum_multixact_freeze_table_age = 150000000
+#bytea_output = 'hex'			# hex, escape
+#xmlbinary = 'base64'
+#xmloption = 'content'
+#gin_fuzzy_search_limit = 0
+#gin_pending_list_limit = 4MB
+
+# - Locale and Formatting -
+
+datestyle = 'iso, mdy'
+#intervalstyle = 'postgres'
+timezone = 'localtime'
+#timezone_abbreviations = 'Default'     # Select the set of available time zone
+					# abbreviations.  Currently, there are
+					#   Default
+					#   Australia (historical usage)
+					#   India
+					# You can create your own file in
+					# share/timezonesets/.
+#extra_float_digits = 0			# min -15, max 3
+#client_encoding = sql_ascii		# actually, defaults to database
+					# encoding
+
+# These settings are initialized by initdb, but they can be changed.
+lc_messages = 'en_IN'			# locale for system error message
+					# strings
+lc_monetary = 'en_IN'			# locale for monetary formatting
+lc_numeric = 'en_IN'			# locale for number formatting
+lc_time = 'en_IN'				# locale for time formatting
+
+# default configuration for text search
+default_text_search_config = 'pg_catalog.english'
+
+# - Other Defaults -
+
+#dynamic_library_path = '$libdir'
+#local_preload_libraries = ''
+#session_preload_libraries = ''
+
+
+#------------------------------------------------------------------------------
+# LOCK MANAGEMENT
+#------------------------------------------------------------------------------
+
+#deadlock_timeout = 1s
+#max_locks_per_transaction = 64		# min 10
+					# (change requires restart)
+# Note:  Each lock table slot uses ~270 bytes of shared memory, and there are
+# max_locks_per_transaction * (max_connections + max_prepared_transactions)
+# lock table slots.
+#max_pred_locks_per_transaction = 64	# min 10
+					# (change requires restart)
+
+
+#------------------------------------------------------------------------------
+# VERSION/PLATFORM COMPATIBILITY
+#------------------------------------------------------------------------------
+
+# - Previous PostgreSQL Versions -
+
+#array_nulls = on
+#backslash_quote = safe_encoding	# on, off, or safe_encoding
+#default_with_oids = off
+#escape_string_warning = on
+#lo_compat_privileges = off
+#operator_precedence_warning = off
+#quote_all_identifiers = off
+#sql_inheritance = on
+#standard_conforming_strings = on
+#synchronize_seqscans = on
+
+# - Other Platforms and Clients -
+
+#transform_null_equals = off
+
+
+#------------------------------------------------------------------------------
+# ERROR HANDLING
+#------------------------------------------------------------------------------
+
+#exit_on_error = off			# terminate session on any error?
+#restart_after_crash = on		# reinitialize after backend crash?
+
+
+#------------------------------------------------------------------------------
+# CONFIG FILE INCLUDES
+#------------------------------------------------------------------------------
+
+# These options allow settings to be loaded from files other than the
+# default postgresql.conf.
+
+#include_dir = 'conf.d'			# include files ending in '.conf' from
+					# directory 'conf.d'
+#include_if_exists = 'exists.conf'	# include file only if it exists
+#include = 'special.conf'		# include file
+
+
+#------------------------------------------------------------------------------
+# CUSTOMIZED OPTIONS
+#------------------------------------------------------------------------------
+
+# Add settings for extensions here
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-master$ cat /etc/postgresql/9.5/main/postgresql.conf  | grep 54[K[K[K port
+[01;31m[Kport[m[K = 5433				# (change requires restart)
+					# sup[01;31m[Kport[m[Ked by the operating system:
+					# sup[01;31m[Kport[m[Ked by the operating system:
+					#   %r = remote host and [01;31m[Kport[m[K
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-master$ sudo apt-get remove postgresql
+sudo: /var/lib/sudo/poovarasan/3 writable by non-owner (0100777), should be mode 0600
+[sudo] password for poovarasan: 
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 1%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following packages will be REMOVED:
+  postgresql
+0 upgraded, 0 newly installed, 1 to remove and 274 not upgraded.
+After this operation, 53.2 kB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 204553 files and directories currently installed.)
+Removing postgresql (9.5+172.pgdg12.4+1) ...
+]0;poovarasan@poovarasan-HP-246-Notebook-PC: ~/ruby/rails new versiomn/Phoenix-masterpoovarasan@poovarasan-HP-246-Notebook-PC:~/ruby/rails new versiomn/Phoenix-master$ sudo apt-get remove postgresql[K[K[K[K
